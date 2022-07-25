@@ -8,7 +8,7 @@
 
     - name: print ios_facts to stdout
       ansible.builtin.debug:
-        var: ansibel_net_model
+        var: ansible_net_model
 
     - cisco.ios.ios_command:
         commands: show ip interface brief
