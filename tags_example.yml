@@ -9,3 +9,12 @@
     - name: print ios_facts to stdout
       ansible.builtin.debug:
         var: ansibel_net_model
+
+    - cisco.ios.ios_command:
+        commands: show ip interface brief
+      tags: show_ip
+      register: output
+
+    - ansible.builtin.debug:
+        var: output
+      tags: show_ip
