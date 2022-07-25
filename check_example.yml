@@ -1,0 +1,9 @@
+---
+- name: check example
+  hosts: cisco5
+  gather_facts: false
+  tasks:
+    - cisco.ios.ios_config:
+        lines:
+          - ntp server: 1.1.1.1
+          - ntp server: 152.2.21.1
