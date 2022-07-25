@@ -1,0 +1,11 @@
+---
+- name: Tags Example
+  hosts: cisco
+  gather_facts: false
+  tasks:
+    - cisco.ios.ios_facts:
+      tags: facts_only
+
+    - name: print ios_facts to stdout
+      ansible.builtin.debug:
+        var: ansibel_net_model
