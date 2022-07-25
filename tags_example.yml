@@ -6,7 +6,7 @@
     - cisco.ios.ios_facts:
       tags: facts_only
 
-    - name: print ios_facts to stdout
+    - name: print model of device stdout
       ansible.builtin.debug:
         var: ansible_net_model
 
