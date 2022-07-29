@@ -2,7 +2,9 @@
 - name: when testing
   hosts: local
   gather_facts: false
+  vars:
+    my_string: whatever
   tasks:
     - debug:
         msg: "Hello World"
-      when: false
+      when: my_string == 'whatever'
