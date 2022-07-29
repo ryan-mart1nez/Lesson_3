@@ -3,5 +3,5 @@
   hosts: local
   gather_facts: false
   tasks:
-    debug:
+    - debug:
       msg: "Hello World"
